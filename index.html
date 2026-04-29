@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Captain Americano — the brewing hero. Ask him anything. In coffee we trust." />
+  <title>Captain Americano — In Coffee We Trust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="20" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="1"/>
+          <polygon points="20,14 21.8,18.6 26.5,18.6 22.8,21.4 24.2,26 20,23.2 15.8,26 17.2,21.4 13.5,18.6 18.2,18.6" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">Captain Americano</span>
+      </div>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#ask">Ask the Captain</a></li>
+          <li><a href="#lore">Origin</a></li>
+          <li><a href="#menu">The Menu</a></li>
+          <li><a href="#quotes">Wisdom</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">From the darkest roast comes the greatest hero</p>
+          <h1 id="hero-title" class="hero-title">Captain<br/>Americano</h1>
+          <p class="hero-tagline">In Coffee We Trust</p>
+          <div class="hero-meta">
+            <span>Brewed for Justice</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>No Decaf Allowed</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>Full Bodied Hero</span>
+          </div>
+          <a href="#ask" class="btn btn-primary">Ask the Captain</a>
+        </div>
+        <figure class="hero-poster">
+          <img src="assets/captain-americano-poster.png" alt="Captain Americano standing on the bow of a wooden ship, sails billowing, seagulls in the misty distance." loading="eager" />
+          <figcaption class="sr-only">Captain Americano — The Brewing Hero</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ASK -->
+    <section id="ask" class="ask" aria-labelledby="ask-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Transmission Line</p>
+          <h2 id="ask-title">Ask Captain Americano</h2>
+          <p class="section-lead">The Captain's been brewing answers since 1942. Pour a question, he'll pour some wisdom.</p>
+        </div>
+
+        <div class="chat-card">
+          <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Conversation with Captain Americano">
+            <div class="chat-msg chat-msg--cap">
+              <span class="chat-avatar" aria-hidden="true">
+                <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="20,14 21.8,18.6 26.5,18.6 22.8,21.4 24.2,26 20,23.2 15.8,26 17.2,21.4 13.5,18.6 18.2,18.6" fill="currentColor"/></svg>
+              </span>
+              <div class="chat-bubble">
+                <p class="chat-name">Captain Americano</p>
+                <p class="chat-text">At ease, soldier. Pull up a mug. What's on your mind?</p>
+              </div>
+            </div>
+          </div>
+
+          <form id="chat-form" class="chat-form" autocomplete="off">
+            <label for="chat-input" class="sr-only">Your message to Captain Americano</label>
+            <input
+              id="chat-input"
+              name="message"
+              type="text"
+              placeholder="Type your question, soldier..."
+              maxlength="240"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+
+          <div class="chat-suggestions" aria-label="Suggested questions">
+            <button type="button" class="chip" data-prompt="What's the best coffee for a Monday?">Best Monday brew?</button>
+            <button type="button" class="chip" data-prompt="Give me a motivational quote.">Motivate me</button>
+            <button type="button" class="chip" data-prompt="How do I handle a tough meeting?">Tough meeting advice</button>
+            <button type="button" class="chip" data-prompt="Tell me a joke.">Tell me a joke</button>
+            <button type="button" class="chip" data-prompt="What's your origin story?">Your origin story</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LORE -->
+    <section id="lore" class="lore" aria-labelledby="lore-title">
+      <div class="container lore-grid">
+        <div class="lore-copy">
+          <p class="eyebrow">The Origin</p>
+          <h2 id="lore-title">Born in a Brooklyn Cafe, 1942</h2>
+          <p>Before the shield, before the serum, there was a skinny kid from Brooklyn with a bad back and a worse espresso machine. They said he couldn't brew. They said he couldn't pull a proper shot. He didn't listen.</p>
+          <p>A classified program. An experimental bean. One courageous taste test. What emerged was no ordinary barista. He was peak human performance in a red-white-and-blue apron — and he had a shield made of reinforced porcelain.</p>
+          <p>Today, he stands watch over every break room, every third-wave cafe, every office Keurig that's seen better days. Wherever coffee is needed, wherever decaf threatens liberty, Captain Americano answers the call.</p>
+        </div>
+        <aside class="lore-stats" aria-label="Hero stats">
+          <div class="stat">
+            <span class="stat-num">12oz</span>
+            <span class="stat-label">Standard Issue Mug</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">1942</span>
+            <span class="stat-label">First Brewed</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">200°F</span>
+            <span class="stat-label">Fighting Temperature</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">&infin;</span>
+            <span class="stat-label">Refills Granted</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Featured Brews</p>
+          <h2 id="menu-title">The Avengers Roast Menu</h2>
+          <p class="section-lead">Each drink hand-pulled by the Captain himself. No decaf served on these premises.</p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <h3 class="menu-name">The Star-Spangled Americano</h3>
+            <p class="menu-notes">Tasting notes: toasted oak, dark chocolate, quiet confidence.</p>
+            <p class="menu-desc">Two shots of ethically sourced espresso meet hot water and a whole lot of conviction. The drink that started it all.</p>
+            <p class="menu-price">Priceless</p>
+          </article>
+
+          <article class="menu-card">
+            <h3 class="menu-name">Winter Soldier Cold Brew</h3>
+            <p class="menu-notes">Tasting notes: steel, shadow, redemption arc.</p>
+            <p class="menu-desc">Steeped for sixteen hours in cold water and complicated history. Smooth finish, complicated past.</p>
+            <p class="menu-price">A firm handshake</p>
+          </article>
+
+          <article class="menu-card">
+            <h3 class="menu-name">Mjolnir Macchiato</h3>
+            <p class="menu-notes">Tasting notes: thunder, honey, worthiness.</p>
+            <p class="menu-desc">Only those worthy may lift this three-layered wonder. The foam? Unreasonably dense.</p>
+            <p class="menu-price">Proof of worth</p>
+          </article>
+
+          <article class="menu-card">
+            <h3 class="menu-name">Hulk Smash Espresso</h3>
+            <p class="menu-notes">Tasting notes: green apple, rage, surprising subtlety.</p>
+            <p class="menu-desc">Quadruple ristretto. Pulls no punches. Do not operate heavy machinery. Do not antagonize.</p>
+            <p class="menu-price">Whatever you've got</p>
+          </article>
+
+          <article class="menu-card">
+            <h3 class="menu-name">Iron Man Flat White</h3>
+            <p class="menu-notes">Tasting notes: polish, charisma, guilt complex.</p>
+            <p class="menu-desc">Silky microfoam with a heart of gold and titanium. Sarcastic aftertaste. Absolutely pays for itself.</p>
+            <p class="menu-price">I am paying, thank you</p>
+          </article>
+
+          <article class="menu-card">
+            <h3 class="menu-name">Black Widow Pour Over</h3>
+            <p class="menu-notes">Tasting notes: red currant, stealth, precision.</p>
+            <p class="menu-desc">Single-origin Ethiopian, bloomed with surgical care. No wasted movement. Never betrays you.</p>
+            <p class="menu-price">Trust, slowly earned</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTES -->
+    <section id="quotes" class="quotes" aria-labelledby="quotes-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Wisdom from the Captain</p>
+          <h2 id="quotes-title">Words to Brew By</h2>
+        </div>
+        <div class="quote-grid">
+          <blockquote class="quote-card">
+            <p>"I could brew this all day."</p>
+            <cite>— Captain Americano, every morning</cite>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p>"The price of freedom is high. The price of a good espresso is higher. Both are worth it."</p>
+            <cite>— Captain Americano</cite>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p>"When the whole world tells you to drink decaf, it's your duty to plant yourself like a French press, look them in the eye, and say no, you move."</p>
+            <cite>— Captain Americano</cite>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p>"On your left. That's where I keep my cream."</p>
+            <cite>— Captain Americano, mid-jog</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-tag">In Coffee We Trust &middot; Brewed for Justice &middot; No Decaf Allowed</p>
+      <p class="footer-fine">A tribute site. Not affiliated with Marvel or any coffee roaster. Built with strong coffee.</p>
+    </div>
+  </footer>
+
+  <script src="js/persona.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
