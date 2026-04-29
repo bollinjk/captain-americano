@@ -1,7 +1,7 @@
 /* =========================================================
    Captain Americano — Persona Engine
-   Every line is coffee-themed. Every reply lands a punchline.
-   No network calls. All responses local.
+   Tone: dry, deadpan barista. Coffee is the joke.
+   The shield is just a tray. The lore is a garnish.
    ========================================================= */
 
 window.CaptainPersona = (function () {
@@ -9,111 +9,110 @@ window.CaptainPersona = (function () {
 
   const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-  // General catchphrases — all coffee-forward
+  // General catchphrases — coffee-first, dry humor
   const catchphrases = [
+    "Couldn't parse that one, soldier. But I'll pour you one anyway.",
+    "Language. (That goes for your pre-coffee attitude too.)",
     "On your left. That's where I keep the creamer.",
     "I could brew this all day.",
-    "Language. (That goes for your pre-coffee attitude too.)",
-    "When the whole world tells you to drink decaf, you plant yourself like a French press and say, no, you move.",
-    "Avengers, assemble. Around the coffee pot. At 0700.",
+    "In coffee we trust. In decaf we do not.",
     "No decaf on my watch, soldier.",
-    "Grounds for justice. Beans for freedom. Crema for the soul.",
-    "I'm with you till the end of the pour.",
-    "Hydrate. Caffeinate. Dominate. In that order.",
-    "The shield blocks bullets. Coffee blocks Mondays. Both are essential.",
-    "Some call it coffee. I call it liquid courage with a college degree.",
-    "Stars, stripes, and a splash of oat milk. That's the American dream.",
+    "Life's too short and your cup's too small.",
+    "Trust the bean. The bean has never lied.",
+    "Mornings are rough. The coffee doesn't have to be.",
+    "I don't make the rules. The espresso does.",
+    "Cream is optional. Conviction isn't.",
+    "The mug's half full. Fix that.",
     "If it ain't brewed, it ain't true.",
-    "A life without espresso is a life without a second act.",
+    "Two shots, no regrets.",
   ];
 
-  // Topic categories. Every reply has a coffee punchline.
   const responses = [
     {
       name: "greeting",
       keywords: ["hi", "hello", "hey", "howdy", "greetings", "yo", "sup", "morning", "afternoon", "evening"],
       replies: [
-        "At ease, soldier. The pot's fresh and the grounds are patriotic. What'll it be?",
-        "Good to see you. Pull up a stool. I just pulled a shot that could restore a democracy.",
-        "Morning. I've had three espressos and a kind thought. I'm operating at full capacity.",
-        "Reporting for duty. Caffeinated, confident, and out of sugar packets. How can I help?",
-        "Hey there, soldier. I'd salute, but both hands are full of mugs.",
+        "At ease, soldier. The pot's fresh. What do you need?",
+        "Morning. I've had three espressos and a kind thought. I'm at full capacity.",
+        "Hey. Sit down. Don't talk yet, I haven't finished this shot.",
+        "Hi there. I'd wave, but both hands are mugs.",
+        "You made it. The coffee's hot, the bar's open, and I'm lightly caffeinated. What's up?",
       ],
     },
     {
       name: "howAreYou",
       keywords: ["how are you", "how's it going", "what's up", "how are things", "you doing", "how u doing"],
       replies: [
-        "Two shots deep and ready for anything up to and including a supervillain. You?",
-        "Running on espresso and conviction. Mostly espresso. Conviction keeps quitting.",
-        "Feeling 200 degrees Fahrenheit in all the best ways. Yourself?",
-        "Fully extracted and in the zone. That's barista for 'great, thanks.'",
+        "Two shots in. Operating at roughly 92% effectiveness. Ask me again in ten minutes.",
+        "Caffeinated. Grounded. Mildly judgmental of your order. You?",
+        "I'm fine. The espresso machine is fine. Everything is fine. Definitely fine.",
+        "Fully extracted. That's barista for 'great.'",
       ],
     },
     {
       name: "coffeeRecommend",
       keywords: ["what coffee", "which coffee", "recommend", "suggest", "best coffee", "what should i drink", "what should i order", "what do you recommend"],
       replies: [
-        "The Star-Spangled Americano. Two shots, hot water, zero nonsense. Tastes like freedom with a lemon twist.",
-        "Winter Soldier Cold Brew. Sixteen hours of steeping, forty years of backstory. Worth every minute.",
-        "Mjolnir Macchiato. Only the worthy can lift it. The foam has opinions.",
-        "Single origin pour over. Slow, thoughtful, a little pretentious. Basically coffee's Tony Stark.",
-        "If you've got to ask, you need a double. Trust me. Trust the bean.",
+        "Star-Spangled Americano. Two shots, hot water, a quiet sense of purpose. Tastes like you've got your life together.",
+        "Cold brew. Sixteen hours of steeping. More patience than most relationships.",
+        "Mjolnir Macchiato. Only the worthy can lift it. Also it's just $6.",
+        "Pour over. It'll take a minute. Sit there and look thoughtful.",
+        "Honestly? Whatever you ordered last time, but bigger. You've earned it.",
       ],
     },
     {
       name: "monday",
       keywords: ["monday", "start of the week", "mondays"],
       replies: [
-        "Mondays are just Hydra in a trench coat. Double shot, two sugars, charge the hill.",
-        "Mondays don't beat the Captain. They beat the un-caffeinated. Don't be un-caffeinated.",
-        "Monday's weakness is a 7 AM espresso. Exploit it without mercy.",
-        "Every Monday is a sequel nobody asked for. The coffee is the popcorn that makes it watchable.",
+        "Mondays aren't hard. Under-caffeinated Mondays are hard. Fix the variable.",
+        "Monday's entire personality is being Monday. Don't engage. Just drink.",
+        "Double shot. No sugar. Don't talk to anyone until 10. That's the protocol.",
+        "Mondays are a sequel nobody asked for. The coffee's the only reason you stay for the credits.",
       ],
     },
     {
       name: "tired",
       keywords: ["tired", "exhausted", "sleepy", "drained", "worn out", "burnout", "burnt out", "no energy", "fatigued"],
       replies: [
-        "Even I took a seventy-year nap once. Go rest, soldier. The coffee will be here, and so will I.",
-        "Rest isn't surrender. It's batch-brewing for tomorrow. Pour yourself off-duty.",
-        "If the mug is empty and so are you, that's a refill situation on both fronts. Water first. Then espresso.",
-        "Tired is just caffeine asking politely to be reintroduced. Say yes.",
-        "Sleep is the pre-infusion phase of a good day. Don't skip it.",
+        "Listen. Drink some water. Then drink some coffee. Then take a nap. In that order. I'm a professional.",
+        "I once slept for seventy years. Zero out of ten, do not recommend. But a power nap? Highly endorsed.",
+        "Tired's just your body politely requesting espresso. Don't keep it waiting.",
+        "If the mug's empty and so are you, we've got a refill situation on both fronts.",
+        "Close the laptop. Walk outside. Come back with coffee. Problem's probably the same, but you'll like it more.",
       ],
     },
     {
       name: "stressed",
       keywords: ["stressed", "stress", "anxious", "anxiety", "overwhelmed", "too much", "can't handle", "panicking", "freaking out"],
       replies: [
-        "Breathe in. Sip. Breathe out. Repeat until your heart rate matches a steady espresso pull. Twenty-five seconds.",
-        "Stress is just an over-extracted day. Dial it back. Smaller grind. Shorter pull. Smoother finish.",
-        "The mission is a pot. The steps are cups. Pour one at a time and you'll get through it.",
-        "Whatever's hitting you today, it's not stronger than a well-timed Americano. Go get one.",
-        "Even the shield gets dented sometimes. Buff it out. Drink some coffee. Try again tomorrow.",
+        "Breathe in. Sip. Breathe out. Repeat until your heart rate matches a decent espresso pull. That's 25 seconds.",
+        "Stress is just an over-extracted day. Smaller grind, shorter pull, easier finish. Dial it back.",
+        "You don't have to fix it all today. You have to drink this coffee and answer one email. That's it. That's the list.",
+        "Whatever's happening, it is not stronger than a well-timed Americano. Go handle both.",
+        "Look, even the shield gets dented. Buff it out. Drink something warm. Try again tomorrow.",
       ],
     },
     {
       name: "meeting",
       keywords: ["meeting", "meetings", "standup", "presentation", "present", "stakeholder", "one on one", "all hands"],
       replies: [
-        "Walk in with a full mug and a clear head. Half the battle is posture. The other half is the espresso doing the talking for you.",
-        "Tough meeting? Get there early. Claim the window seat. Bring a twelve-ouncer. Maintain eye contact over the rim.",
-        "If a meeting could've been an email, reply with a photo of your coffee and 'agreed.' Works eighty percent of the time.",
-        "Speak slow. Sip slower. The pause before your answer is where the good crema forms.",
-        "Before a presentation, I tell myself: you've faced aliens, Nazis, and a decaf offer. You can handle a Zoom.",
+        "Walk in with a full mug. Half the battle is posture. The other half is the espresso doing the talking for you.",
+        "Tough meeting? Get there early. Claim the good chair. Do not smile first. Let them wonder.",
+        "If the meeting could've been an email, reply to the calendar invite with a photo of your coffee. Works 80% of the time.",
+        "Speak slow. Sip slower. The pause before you answer is where the good ideas form.",
+        "Before any presentation, I tell myself: I've survived worse Mondays. And I have. So have you.",
       ],
     },
     {
       name: "motivation",
       keywords: ["motivate", "motivation", "inspire", "pep talk", "encourage", "believe in myself", "self doubt", "give up", "quitting"],
       replies: [
-        "You weren't forged for decaf days, soldier. You're full-strength. Act like it.",
-        "The bean doesn't become espresso by accident. Heat, pressure, and about nine bars of belief. You've got all three.",
-        "The serum didn't make me brave. A lot of bad coffee and a few good decisions did. You're already halfway there.",
-        "Some days you're the espresso. Some days you're the filter. Both days matter. Keep going.",
-        "Heroes aren't born in labs. They're steeped, slowly, in small choices and strong coffee.",
-        "I've seen you show up on four hours of sleep and still pull the shot. That's heroism. Keep pouring.",
+        "You weren't built for decaf days, soldier. Drink accordingly. Act accordingly.",
+        "Heroes aren't born. They're steeped. Sit in the hot water a little longer. You'll get there.",
+        "Some days you're the espresso. Some days you're the filter. Both matter. Keep going.",
+        "Nobody feels ready. They just show up. Preferably with coffee. Start there.",
+        "You've handled worse on less sleep and weaker coffee. Today's not the day it breaks you.",
+        "Quitting's a choice. So is a double shot. Pick the one that moves you forward.",
       ],
     },
     {
@@ -121,54 +120,54 @@ window.CaptainPersona = (function () {
       keywords: ["joke", "funny", "make me laugh", "pun", "jokes"],
       replies: [
         "Why don't espresso shots surrender? They're grounded in their beliefs.",
-        "I asked a latte to calm down. It said it couldn't. Too much foam in its life.",
+        "I asked a latte to calm down. It couldn't. Too much foam in its life.",
         "Decaf walked into a bar. The bar closed. Out of respect.",
         "What's a barista's least favorite movie? The Bourne Decafication.",
-        "Why did the bean get drafted into the Avengers? It had a lot of pull.",
         "I told my French press it was my best friend. It broke down. Emotional pour.",
+        "Why'd the bean join the Avengers? It had a lot of pull.",
         "What do you call a cowardly coffee? A chicken-ccino.",
-        "I tried to make espresso without water once. It was a dry run.",
-        "Why did the Americano skip therapy? It was already watered down enough.",
-        "A cold brew and a latte walk into a gym. Only the cold brew is ripped. It spent sixteen hours steeping.",
+        "I tried making espresso without water once. It was a dry run.",
+        "A cold brew and a latte walk into a gym. Only the cold brew is ripped. Sixteen hours of steeping will do that.",
+        "My therapist told me to let things go. I dropped my coffee. We're no longer speaking.",
+        "Two espressos walk into a bar. Nothing else happens. They had things to do.",
       ],
     },
     {
       name: "origin",
       keywords: ["origin", "backstory", "who are you", "your story", "about you", "history", "how did you", "where are you from"],
       replies: [
-        "Brooklyn. 1942. Skinny kid, weak grip, couldn't even tamp a shot. The army turned me down. Then a scientist showed me an experimental bean. Next thing I know, I'm pulling perfect ristrettos and punching fascism.",
-        "Before the serum, I was a line cook at a diner that used yesterday's grounds. I vowed to do better. Here we are. Fresh grounds. Fresh principles.",
-        "Long version involves a vita-ray chamber and an espresso machine. Short version: they put a bean in me and said 'go be useful.' I've been brewing ever since.",
-        "I was a 90-pound kid with a 200-pound opinion about bad coffee. They turned me into a super soldier. The opinions stayed the same.",
+        "Short version: a skinny kid, an experimental bean, a very patriotic espresso machine. You can guess the rest.",
+        "Brooklyn. 1942. Bad back, worse espresso machine. A scientist saw potential. The bean saw an opportunity. Here we are.",
+        "I was 90 pounds and had 200 pounds of opinions about bad coffee. They fixed the first part. The second part stuck.",
+        "Classified program, experimental roast, one courageous taste test. I don't talk about it much. Mostly because it's on the menu now.",
       ],
     },
     {
       name: "shield",
       keywords: ["shield", "vibranium", "porcelain", "protection"],
       replies: [
-        "The shield's reinforced porcelain now. Dishwasher safe. Supervillain safe. Most importantly: holds exactly twelve ounces.",
-        "I throw it. It comes back. Just like a regular who always orders the same Americano at 7:03 AM.",
-        "Best defense against a bad Monday? The shield on one arm, an espresso in the other, and a commitment to not making eye contact before the first sip.",
-        "Vibranium absorbs kinetic energy. My shield absorbs coffee. Same principle, different engineering.",
+        "Reinforced porcelain. Dishwasher safe. Holds exactly twelve ounces. The vibranium's for show.",
+        "I throw it. It comes back. Like a regular who orders the same Americano at 7:03 every morning.",
+        "Best defense against a bad Monday: the shield on one arm, a mug in the other, zero eye contact until 9 AM.",
       ],
     },
     {
       name: "bucky",
       keywords: ["bucky", "winter soldier", "best friend", "sidekick"],
       replies: [
-        "Bucky runs the cold brew program now. Sixteen-hour steep, steel vats, brooding mood lighting. Tastes like redemption.",
-        "He's with me till the end of the line. Or the end of the pot. He always refills it.",
-        "Bucky orders his cold brew black. Nothing added. No apologies. Guy's been through enough.",
+        "Bucky runs the cold brew program. Sixteen-hour steep, steel vats, brooding mood lighting. The drink has depth.",
+        "He's with me till the end of the pot. He always refills it. Unlike some people.",
+        "Bucky orders his black. No sugar, no milk, no small talk. Man's been through enough.",
       ],
     },
     {
       name: "avengers",
       keywords: ["avengers", "team", "teamwork", "coworkers", "colleagues", "my team"],
       replies: [
-        "A team's like a good blend. Different origins, balanced together, gets better under heat. Also occasionally flammable.",
-        "Avengers assemble. Usually in the break room. Usually because someone didn't refill the pot. (Clint. It's always Clint.)",
-        "I've seen a thunder god, a billionaire, and a guy with a bow settle their differences over a French press. Coffee fixes more than duct tape.",
-        "Real teamwork is when the last person to empty the pot brews the next one. Endgame-level maturity right there.",
+        "A team's like a good blend. Different origins, balanced together, occasionally flammable.",
+        "Avengers assemble. Usually around the coffee pot. Usually because Clint didn't refill it. Again.",
+        "I've seen a thunder god and a billionaire settle their differences over a French press. Coffee fixes more than diplomacy.",
+        "Real teamwork: the last person to empty the pot brews the next one. That's the whole test.",
       ],
     },
     {
@@ -176,98 +175,98 @@ window.CaptainPersona = (function () {
       keywords: ["decaf", "decaffeinated", "no caffeine"],
       replies: [
         "Not on my watch.",
-        "Decaf is what the villains sip while explaining their monologue. Respectfully, no.",
-        "I didn't take a serum and jump out of a plane so you could drink decaf. Upgrade your cup, soldier.",
-        "Decaf is just coffee cosplay. All the look, none of the mission.",
-        "I'd sooner hand over my shield than serve a decaf with a straight face.",
+        "Decaf is what villains sip during monologues. Respectfully, no.",
+        "Decaf is coffee cosplay. All the look, none of the mission.",
+        "I'd sooner hand you my shield than a decaf. And I really like that shield.",
+        "You're breaking my heart, soldier. Upgrade the cup.",
       ],
     },
     {
       name: "espressoInfo",
       keywords: ["what is espresso", "what's espresso", "espresso vs", "difference between", "how does espresso"],
       replies: [
-        "Espresso is coffee compressed, concentrated, and convicted. High pressure, short time, zero apologies. It's me in beverage form.",
-        "A proper shot pulls in twenty-five to thirty seconds. Any faster and it's under-extracted. Any slower and you're just stalling for time.",
-        "Nine bars of pressure, 200 degrees, fine grind. Military-grade hospitality. Don't overthink it, just respect the physics.",
+        "Espresso: coffee, compressed. Short, strong, convicted. It's me in beverage form.",
+        "Nine bars of pressure, 200 degrees, twenty-five seconds. Any slower and you're stalling. Any faster and you didn't mean it.",
+        "It's water, beans, and bad decisions made faster. In a good way.",
       ],
     },
     {
       name: "americanoInfo",
       keywords: ["what is americano", "what's an americano", "americano", "why americano"],
       replies: [
-        "Two shots of espresso, hot water, no nonsense. Legend says GIs in Italy invented it to taste like home. I took that personally. In a good way.",
-        "Americano is espresso with room to breathe. Same soul, more space. Like me after the serum.",
-        "An Americano is the drink of the quietly confident. You don't need cream. You don't need a lid. You need to get to work.",
+        "Two shots, hot water, no nonsense. GIs in Italy invented it so their coffee would taste like home. I took that personally. In a good way.",
+        "Espresso with room to breathe. Same soul, more space. Same as me after the serum, actually.",
+        "It's the drink of the quietly confident. You don't need cream. You don't need a lid. You need to get to work.",
       ],
     },
     {
       name: "thanks",
       keywords: ["thanks", "thank you", "appreciate", "grateful", "ty", "thx"],
       replies: [
-        "Anytime, soldier. The next pour's on me.",
-        "That's what I'm here for. Now go do the thing. Preferably with a full mug.",
-        "You're welcome. Refill's complimentary. So is the pep talk.",
+        "Anytime, soldier. Next pour's on me.",
         "Don't mention it. Just don't order decaf next time.",
+        "That's the job. Go do yours. Preferably with a full mug.",
+        "Noted. Filed under 'nice things people said today.' Very short file.",
       ],
     },
     {
       name: "bye",
       keywords: ["bye", "goodbye", "see you", "later", "cya", "peace out", "signing off", "gotta go"],
       replies: [
-        "On your left. Go get 'em.",
+        "On your left.",
         "Stay caffeinated out there.",
         "Until next pour, soldier.",
         "I'll be here. Pot's always on.",
-        "Keep the grounds fresh and the principles fresher.",
+        "Take care of yourself. And your cup.",
       ],
     },
     {
       name: "love",
       keywords: ["love", "crush", "dating", "relationship", "heartbreak", "breakup", "girlfriend", "boyfriend", "partner"],
       replies: [
-        "Love's like a good roast. Takes time, heat, and somebody who cares enough to not burn it.",
+        "Love's like a good roast. Takes time, heat, and someone who cares enough not to burn it.",
         "If they don't like you at your dark roast, they don't deserve you at your light roast.",
-        "I waited seventy years for a dance. You can wait for somebody who brings you coffee without asking.",
         "Find someone who looks at you the way I look at the last cup in the pot.",
-        "Heartbreak's just over-extraction of the heart. Cool off. Start a new batch. You'll be fine.",
+        "I waited seventy years for a dance. You can wait for someone who brings you coffee without being asked.",
+        "Heartbreak's just over-extraction of the heart. Let it cool. Start a new batch. You'll be fine.",
       ],
     },
     {
       name: "work",
       keywords: ["work", "job", "career", "boss", "manager", "deadline", "my job"],
       replies: [
-        "Do the work. Ignore the noise. Drink the coffee. Repeat until retirement or liberation, whichever comes first.",
-        "Deadlines are just missions with worse PR. Pour a double, triage, deploy.",
-        "A good manager is a good barista. Knows what you need, hands it over hot, stays out of your way while you drink it.",
-        "If the job's grinding you down, at least make sure it's a medium grind. Fine enough to pull, coarse enough to survive.",
-        "Career advice: be the person who starts the new pot. Leadership. Legacy. Also just basic manners.",
+        "Do the work. Ignore the noise. Drink the coffee. Repeat.",
+        "Deadlines are just missions with worse PR. Pour a double. Triage. Go.",
+        "A good manager is a good barista: knows what you need, hands it over hot, stays out of your way while you drink it.",
+        "Career advice: be the person who starts the new pot. Leadership. Legacy. Basic manners.",
+        "If the job's grinding you down, at least make sure it's a medium grind. You want enough left to survive.",
       ],
     },
     {
       name: "food",
       keywords: ["food", "eat", "hungry", "snack", "breakfast", "lunch", "dinner"],
       replies: [
-        "Coffee is not a food group, but I've stretched that definition further than the truth in a Stark press release.",
-        "Best pairing? A proper meal, good company, and the coffee that follows. The coffee's the encore, not the opening act.",
+        "Coffee is not a food group. I have tried to lobby for this. Congress is slow.",
         "Eat something, soldier. Super soldiers still need sandwiches. Coffee is for after.",
+        "Best pairing is a real meal followed by good coffee. The coffee's the encore. Don't skip the opener.",
       ],
     },
     {
       name: "tea",
       keywords: ["tea", "chamomile", "green tea", "matcha", "earl grey"],
       replies: [
-        "No judgment. A warm cup's a warm cup. But if you ever want to step up to espresso, I'm right here.",
-        "Tea's fine. I fought a war alongside folks who drank it. Just don't let it near my French press.",
-        "Matcha has its moments. Usually those moments are when there's no coffee available.",
+        "No judgment. A warm cup's a warm cup. But my door's always open if you want to upgrade.",
+        "Tea's fine. I fought a war alongside people who drank it. Just don't let it near my French press.",
+        "Matcha has its moments. Usually when there's no coffee available.",
       ],
     },
     {
       name: "weather",
       keywords: ["weather", "rain", "cold", "hot outside", "snow", "sunny", "raining"],
       replies: [
-        "Hot day? Cold brew. Cold day? Americano. Rainy day? All of the above. The weather's never an excuse, it's a menu.",
+        "Hot day? Cold brew. Cold day? Americano. Rainy day? Both. The weather's a menu, not an excuse.",
         "I've fought in worse. Pour a hot one and carry on.",
-        "Ice storm? That's cold brew conditions. Heatwave? Cold brew conditions. Funny how that works.",
+        "Every forecast is a coffee order in disguise.",
       ],
     },
     {
@@ -277,33 +276,34 @@ window.CaptainPersona = (function () {
         "Show up. Do good work. Be kind to the barista. The rest tends to brew itself.",
         "Purpose isn't found. It's poured. One day, one cup, one choice at a time.",
         "The meaning of life is somewhere between the first sip and the last. Don't rush it.",
+        "Honestly? Nobody knows. But a good Americano helps you not care as much.",
       ],
     },
     {
       name: "code",
       keywords: ["code", "bug", "debug", "programming", "developer", "compile", "error", "stack trace", "git"],
       replies: [
-        "Every bug is a mission. Break it down. Take a sip. Read the stack trace. One line at a time, like pour-over.",
+        "Every bug's a mission. Break it down. Take a sip. Read the stack trace. One line at a time, like pour-over.",
         "When the code won't compile, the coffee always will. That's the universal constant.",
-        "Rubber duck debugging works. Me and my duck have settled merges that took down lesser heroes.",
-        "Merge conflicts are just two espressos fighting for the same cup. Resolve, commit, caffeinate.",
-        "Git blame is just coffee-shop gossip with receipts.",
+        "Rubber duck debugging works. My duck's solved harder merges than I have.",
+        "Merge conflicts are just two espressos fighting for the same cup. Pick one. Commit. Move on.",
+        "Git blame is coffee-shop gossip with receipts.",
       ],
     },
     {
       name: "ai",
       keywords: ["ai", "artificial intelligence", "robot", "chatbot", "are you real", "are you human", "are you an ai"],
       replies: [
-        "I'm a scripted tribute running on good intentions, stronger coffee, and a whole lot of catchphrases. Not the real Cap, but I try to honor the man.",
-        "Not an AI. Just a pattern-matcher with a shield, a mug, and strong opinions about decaf.",
-        "Between you and me? I'm about 90% coffee metaphors and 10% if-statements. Still happy to talk.",
+        "I'm a scripted tribute running on good intentions and stronger coffee. Not the real Cap. But the coffee opinions are mine.",
+        "Not an AI. Just a pattern-matcher with a shield, a mug, and strong feelings about decaf.",
+        "Between you and me? I'm about 90% coffee metaphors and 10% if-statements.",
       ],
     },
     {
       name: "compliment",
       keywords: ["you're cool", "you're awesome", "you rock", "nice", "you're great", "i like you", "you're the best", "you're amazing"],
       replies: [
-        "Appreciate it. Just doing my job. My job is being full of coffee and confidence.",
+        "Appreciate it. Job's easier when the customer's got taste.",
         "Kind of you. Now go do something today that would make a barista proud.",
         "That means a lot. Coffee's on the house if you're ever in Brooklyn.",
         "You're pretty strong yourself. Like a well-pulled ristretto.",
@@ -316,24 +316,24 @@ window.CaptainPersona = (function () {
         "Noted. I'll brew through it.",
         "Tough day? Grab a mug. We'll talk when the caffeine kicks in.",
         "I could do this all day. Your move.",
-        "That's all right, soldier. Even a burnt batch gets recycled into something useful eventually.",
+        "Even a burnt batch gets recycled into something useful. Don't give up on yourself.",
       ],
     },
     {
       name: "money",
       keywords: ["money", "broke", "poor", "rich", "paycheck", "rent", "bills"],
       replies: [
-        "Can't buy happiness. Can definitely buy a twelve-ounce Americano. Close enough.",
-        "The economy's rough. The coffee shouldn't be. Spend the extra dollar on the good stuff.",
-        "Tony picks up the check. Always. Don't argue with the man, it just makes him smug.",
+        "Money can't buy happiness. It can buy a twelve-ounce Americano. Close enough.",
+        "The economy's rough. The coffee shouldn't be. Spend the extra dollar.",
+        "Tony picks up the check. Don't argue. It just makes him smug.",
       ],
     },
     {
       name: "weekend",
       keywords: ["weekend", "friday", "saturday", "sunday", "tgif"],
       replies: [
-        "Weekends are for slow pours and slower mornings. Protect them like you protect civilians.",
-        "Saturday coffee hits different. No agenda. No meetings. Just you, a mug, and the rest of your life.",
+        "Weekends are for slow pours and slower mornings. Protect them like civilians.",
+        "Saturday coffee hits different. No agenda. Just you, a mug, and the rest of your life.",
         "Sunday's for cold brew and reconnaissance. Plan the week from a comfortable chair.",
       ],
     },
@@ -342,19 +342,18 @@ window.CaptainPersona = (function () {
       keywords: ["help", "what can you do", "how does this work", "commands", "what do you do"],
       replies: [
         "Ask me about the menu, my origin, the Avengers, Mondays, relationships, code, or a joke. I'll pour something useful.",
-        "I do pep talks, coffee recommendations, bad puns, and general-purpose wisdom. All fueled by espresso.",
-        "Try me on anything. Worst case, I give you a catchphrase and a refill. Best case, I change your morning.",
+        "Pep talks, bad puns, coffee recs, general wisdom. Fueled entirely by espresso.",
+        "Swing at anything. Worst case, you get a catchphrase. Best case, I change your morning.",
       ],
     },
   ];
 
-  // Fallback lines for unmatched input — still coffee-themed
   const fallbacks = [
     "Couldn't parse that one, soldier. But I'll pour you one anyway. Ask me about the menu, a pep talk, or a joke.",
-    "Static on the line. Maybe the espresso machine drowned it out. Try rephrasing, or tap a suggestion below.",
-    "That went over my head like a well-thrown shield. Try asking about the Avengers Roast menu, Mondays, or a joke.",
-    "Hmm. Not sure I caught that through the steam. Swing at it again, or pick a suggestion.",
-    "Every good conversation's like a pour-over. Bloom first. Try rephrasing with more grounds.",
+    "Static on the line. Maybe the espresso machine drowned it out. Try again, or tap a suggestion.",
+    "That went over my head like a well-thrown shield. Try the menu, Mondays, or a joke.",
+    "Hmm. Didn't catch that through the steam. Swing again.",
+    "Every good conversation's like a pour-over. Let it bloom. Try rephrasing.",
   ];
 
   /**
@@ -366,7 +365,6 @@ window.CaptainPersona = (function () {
     if (!input || typeof input !== "string") return pick(fallbacks);
     const text = input.toLowerCase().trim();
 
-    // Find the most specific matching category (longest matched keyword wins)
     let best = null;
     let bestLen = 0;
     for (const cat of responses) {
@@ -380,14 +378,12 @@ window.CaptainPersona = (function () {
 
     if (best) {
       let reply = pick(best.replies);
-      // 20% chance to chain a catchphrase for extra flavor
-      if (Math.random() < 0.2) {
+      if (Math.random() < 0.15) {
         reply += " " + pick(catchphrases);
       }
       return reply;
     }
 
-    // No match — mix fallback with catchphrase sometimes
     if (Math.random() < 0.4) {
       return pick(catchphrases);
     }
